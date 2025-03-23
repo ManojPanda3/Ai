@@ -1,1 +1,85 @@
 @import "tailwindcss";
+
+@keyframes slideIn {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes bounceUp {
+  0% {
+    transform: translateY(100%);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.animate-slideIn {
+  animation: slideIn 0.3s ease-in-out forwards;
+}
+
+.animate-slideOut {
+  animation: slideIn 0.3s ease-in-out;
+  transform: translateX(-100%);
+  animation-direction: reverse;
+}
+
+.animate-bounceUp {
+  animation: bounceUp 0.3s ease-in-out;
+}
+
+.animate-bounceDown {
+  animation: bounceUp 0.3s ease-in-out;
+  animation-direction: reverse;
+}
+
+.custom-scrollbar {
+  /* Firefox scrollbar properties */
+  scrollbar-width: thin;
+  scrollbar-color: #333 transparent;
+
+  /* Standard CSS properties */
+  scroll-behavior: smooth;
+  -webkit-box-orient: vertical;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  -webkit-box-direction: normal;
+  box-direction: normal;
+  unicode-bidi: isolate;
+  -webkit-box-flex: 1;
+}
+
+/* Chrome/Edge/Safari scrollbar styling */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+  border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.katex {
+  color: inherit !important;
+}
+
+.katex-display {
+  margin: 1em 0;
+}
