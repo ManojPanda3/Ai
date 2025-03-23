@@ -4,7 +4,7 @@ export default class Ai {
   history: Chat[] = []
   web_search: boolean = false
   model: string;
-  api_endpoint: string = "http://127.0.0.1:8000";
+  api_endpoint: string = "/api";
   constructor(model: string = "gpt-4o", web_search: boolean = false, history: Chat[] = []) {
     this.model = model;
     this.history = history;
